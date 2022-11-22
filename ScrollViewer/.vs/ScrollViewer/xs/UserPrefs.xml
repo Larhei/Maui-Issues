@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{99BC3A83-F695-47B0-9096-73F43CED8C45}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB78C63A-5BCE-480E-8E18-481F234CC886" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScrollViewer/MainPage.xaml.cs">
+    <Files>
+      <File FileName="ScrollViewer/MainPage.xaml.cs" Line="22" Column="4" />
+      <File FileName="ScrollViewer/ScrollViewer.csproj" Line="29" Column="16" />
+      <File FileName="ScrollViewer/MainPageViewModel.cs" Line="25" Column="29" />
+      <File FileName="ScrollViewer/MainPage.xaml" Line="25" Column="48" />
+      <File FileName="ScrollViewer/MauiProgram.cs" Line="11" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ScrollViewer" expanded="True">
+            <Node name="ScrollViewer" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ScrollViewer PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB78C63A-5BCE-480E-8E18-481F234CC886" />
+</Properties>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButton.MainPage">
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Frame>
+
+                <Grid ColumnDefinitions="auto,*" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Green" />
+                                        <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Green" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Yellow" />
+                                        <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Yellow" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Ellipse x:Name="Button"
+                    Stroke="Red"
+                    StrokeThickness="2"
+                    InputTransparent="True"
+                    Fill="White"
+                    WidthRequest="21"
+                    HeightRequest="21"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                    <Ellipse x:Name="CheckedIndicator"
+                    Fill="White"
+                    InputTransparent="True"
+                    WidthRequest="11"
+                    HeightRequest="11"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                    <ContentPresenter x:Name="ContentPresenter" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="{TemplateBinding Path=Padding}"/>
+
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="RadioButton1Template">
+                <Grid ColumnDefinitions="auto,*" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Green" />
+                                        <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Green" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Yellow" />
+                                        <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Yellow" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Ellipse x:Name="Button"
+                    Stroke="Red"
+                    StrokeThickness="2"
+                    InputTransparent="True"
+                    Fill="White"
+                    WidthRequest="21"
+                    HeightRequest="21"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                    <Ellipse x:Name="CheckedIndicator"
+                    Fill="White"
+                    InputTransparent="True"
+                    WidthRequest="11"
+                    HeightRequest="11"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                    <ContentPresenter x:Name="ContentPresenter" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="{TemplateBinding Path=Padding}"/>
+
+                </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="RadioButton2Template">
+            <Grid ColumnDefinitions="auto,*" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Green" />
+                                    <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Green" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Yellow" />
+                                    <Setter TargetName="CheckedIndicator" Property="Ellipse.Opacity" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Ellipse x:Name="Button"
+                    Stroke="Red"
+                    StrokeThickness="2"
+                    InputTransparent="True"
+                    Fill="White"
+                    WidthRequest="21"
+                    HeightRequest="21"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <Ellipse x:Name="CheckedIndicator"
+                    Fill="Yellow"
+                    InputTransparent="True"
+                    WidthRequest="11"
+                    HeightRequest="11"
+                    Aspect="Uniform"
+                    Opacity="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <ContentPresenter x:Name="ContentPresenter" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="{TemplateBinding Path=Padding}"/>
+
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="RadioButton3Template">
+            <Grid ColumnDefinitions="auto,*" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Green" />
+                                    <Setter TargetName="CheckedIndicator" Property="Ellipse.Fill" Value="Green" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter TargetName="Button" Property="Ellipse.Stroke" Value="Yellow" />
+                                    <Setter TargetName="CheckedIndicator" Property="Ellipse.IsVisible" Value="True" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Ellipse x:Name="Button"
+                    Stroke="Red"
+                    StrokeThickness="2"
+                    InputTransparent="True"
+                    Fill="White"
+                    WidthRequest="21"
+                    HeightRequest="21"
+                    Aspect="Uniform"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <Ellipse x:Name="CheckedIndicator"
+                    Fill="Yellow"
+                    InputTransparent="True"
+                    WidthRequest="11"
+                    HeightRequest="11"
+                    Aspect="Uniform"
+                    IsVisible="false"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <ContentPresenter x:Name="ContentPresenter" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="{TemplateBinding Path=Padding}"/>
+
+            </Grid>
+        </ControlTemplate>
+
+        <Style x:Key="BugOne" TargetType="RadioButton">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="MinimumHeightRequest" Value="44"/>
+            <Setter Property="MinimumWidthRequest" Value="44"/>
+            <Setter Property="ControlTemplate" Value="{StaticResource RadioButtonTemplate}"/>
+        </Style>
+
+        <Style x:Key="BugTwo" TargetType="RadioButton">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="MinimumHeightRequest" Value="44"/>
+            <Setter Property="MinimumWidthRequest" Value="44"/>
+            <Setter Property="ControlTemplate" Value="{StaticResource RadioButton1Template}"/>
+        </Style>
+
+        <Style x:Key="BugThree" TargetType="RadioButton">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="MinimumHeightRequest" Value="44"/>
+            <Setter Property="MinimumWidthRequest" Value="44"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+
+        <Label Text="RadioButton (iOS and Android) not changing when using Frame as RootElement of the ControlTemplate." />
+        <RadioButton Style="{StaticResource BugOne}"/>
+
+        <Label Text="RadioButton ControlTemplate not working on iOS when applied in Setter of Style." />
+        <RadioButton Style="{StaticResource BugTwo}"/>
+
+        <Label Text="RadioButton ControlTemplate working on iOS and Android, but Opacity trigger not working within template on Android." />
+        <RadioButton Style="{StaticResource BugThree}" ControlTemplate="{StaticResource RadioButton2Template}"/>
+
+        <Label Text="RadioButton ControlTemplate working on iOS and Android, but Visibility trigger not working within template on Android." />
+        <RadioButton Style="{StaticResource BugThree}" ControlTemplate="{StaticResource RadioButton3Template}"/>
+
+        <Label Text="Only working solution so fare on iOS and Android.(ControlTemplate applied on instance level and only color changes in triggers.)" />
+        <RadioButton Style="{StaticResource BugThree}" ControlTemplate="{StaticResource RadioButton1Template}"/>
+
+        <Label Text="Default. But why do i have a RadioButtonGroup on the whole Page? I did not specify a GroupName" />
+        <RadioButton />
+    </VerticalStackLayout>
+</ContentPage>

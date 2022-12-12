@@ -60,5 +60,10 @@ public partial class MainPage : ContentPage
     {
         Shell.Current.GoToAsync("/ButtonStyleLeak");
     }
+
+    private void OnLeak2Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("/BackButtonBehaviour");
+    }
 }
 

@@ -22,6 +22,11 @@
                 TextColor="White"
                 Text="Finalizer not Working in this page."
                 Clicked="OnLeak1Clicked"/>
+
+            <Button
+                TextColor="White"
+                Text="Finalizer not Working in this page because of BackButtonBehaviour."
+                Clicked="OnLeak2Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

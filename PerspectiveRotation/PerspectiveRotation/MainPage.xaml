@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerspectiveRotation.MainPage">
+    <ScrollView>
+        <Grid RowDefinitions="100,50,100,50,100, 50,100">
+            <Border ZIndex="1" WidthRequest="100" HeightRequest="100" Background="Red" />
+            <!-- on ios the Zindex is not respected. The blue border looks like it cropped by the red border. as if they are on the same z-index.-->
+            <Border ZIndex="2" WidthRequest="100" HeightRequest="100" Background="Blue" RotationX="45"/>
+
+            <Border ZIndex="3" Grid.Row="2" WidthRequest="100" HeightRequest="100" Background="Red" />
+            <!-- When moving the anchor off center to the edge, the transformations look different on ios and android. -->
+            <Border ZIndex="4" Grid.Row="2" WidthRequest="100" HeightRequest="100" Background="Blue" RotationX="45" AnchorY="0"/>
+
+            <Border ZIndex="3" Grid.Row="4" WidthRequest="100" HeightRequest="100" Background="Red" />
+            <Border ZIndex="4" Grid.Row="4" WidthRequest="100" HeightRequest="100" Background="Blue" RotationX="90" AnchorY="0"/>
+
+            <Border ZIndex="5" Grid.Row="6" WidthRequest="100" HeightRequest="100" Background="Red" />
+            <Border ZIndex="6" Grid.Row="6" WidthRequest="100" HeightRequest="100" Background="Blue" RotationX="45" AnchorY="0">
+                <Border.Clip>
+                    <!-- There seems to be an issue on android when using rotatex/y on clipped elements. -->
+                    <RectangleGeometry Rect="0,0,100,100" />
+                </Border.Clip>
+           </Border>
+        </Grid>
+
+    </ScrollView>
+    
+
+</ContentPage>
+

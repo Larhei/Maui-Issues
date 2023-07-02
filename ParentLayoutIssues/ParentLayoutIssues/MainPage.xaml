@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParentLayoutIssues.MainPage">
+
+    <Grid RowDefinitions="auto,auto,*,auto">
+        <Label Text="ScrollViewer in star row calculates wrong. During overscroll you should see a button.  Button in Row 3 should be on screen." />
+        <Button Text="Next" VerticalOptions="Center" Grid.Row="1" Clicked="Button_Clicked"/>
+        <ScrollView Grid.Row="2">
+            <Border HeightRequest="1000">
+                <Button Text="Where is the button" VerticalOptions="End"/>
+            </Border>
+
+        </ScrollView>
+        <Button Text="Test" Grid.Row="3"/>
+    </Grid>
+
+</ContentPage>
+

@@ -49,7 +49,7 @@
                 x:Name="CounterBtn"
                 ImageSource="appicon.png"
                 SemanticProperties.Hint="Counts the number of times you click"
-                HorizontalOptions="Fill" />
+                />
         </VerticalStackLayout>
 
     </Shell.FlyoutFooter>

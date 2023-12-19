@@ -47,7 +47,6 @@
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me"
                 ImageSource="appicon.png"
                 SemanticProperties.Hint="Counts the number of times you click"
                 HorizontalOptions="Fill" />

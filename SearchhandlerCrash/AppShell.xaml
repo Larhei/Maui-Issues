@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SearchhandlerCrash.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SearchhandlerCrash"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackground="Blue"
+    Shell.BackgroundColor="DarkGreen"
+    Title="SearchhandlerCrash"
+    >
+
+    <Shell.FlyoutHeader>
+        <Frame Margin="0" BackgroundColor="Transparent" BorderColor="Transparent" >
+            <HorizontalStackLayout Padding="8,12,8,0">
+                <Image Source="dotnet_bot.png" HeightRequest="24" MaximumWidthRequest="101" Aspect="AspectFit"/>
+            </HorizontalStackLayout>
+        </Frame>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter >
+        <Frame Margin="0" BackgroundColor="Transparent" BorderColor="Transparent">
+            <VerticalStackLayout >
+            </VerticalStackLayout>
+        </Frame>
+    </Shell.FlyoutFooter>
+    <MenuItem Text="xxx"/>
+    <TabBar x:Name="PART_Tabs" AutomationId="Tabs">
+        <Tab Title="1"  AutomationId="Tab1">
+            <ShellContent ContentTemplate="{DataTemplate local:SearchView}" />
+        </Tab>
+        <Tab Title="2" AutomationId="Tab2">
+            <ShellContent ContentTemplate="{DataTemplate local:EmptyView}"/>
+        </Tab>
+        <Tab Title="3" AutomationId="Tab3">
+            <ShellContent ContentTemplate="{DataTemplate local:EmptyView}"/>
+        </Tab>
+       
+    </TabBar>
+
+</Shell>

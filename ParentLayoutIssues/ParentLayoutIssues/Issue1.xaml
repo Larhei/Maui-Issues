@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParentLayoutIssues.Issue1"
+             Title="Issue1">
+    <Grid RowDefinitions="auto,auto,*,auto">
+        <Label Text="CarouselView in star row calculates wrong. Button in Row 3 should be on screen." />
+        <Button Text="Next" VerticalOptions="Center" Grid.Row="1" Clicked="Button_Clicked"/>
+        <CarouselView Grid.Row="2">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Border >
+                        <Button Text="Where is the button" VerticalOptions="End"/>
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+            <CarouselView.ItemsSource>
+                <x:String>test</x:String>
+
+            </CarouselView.ItemsSource>
+        </CarouselView>
+        <Button Text="Test" Grid.Row="3"/>
+    </Grid>
+</ContentPage>

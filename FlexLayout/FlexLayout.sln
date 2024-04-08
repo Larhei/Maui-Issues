@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexLayout", "FlexLayout\FlexLayout.csproj", "{7F09FE21-A65B-45F9-80A9-EC83844D490E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F09FE21-A65B-45F9-80A9-EC83844D490E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F09FE21-A65B-45F9-80A9-EC83844D490E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F09FE21-A65B-45F9-80A9-EC83844D490E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F09FE21-A65B-45F9-80A9-EC83844D490E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83DE77D1-2F3C-4666-AA83-A8847DBC0BB5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:FlexLayout"
+             x:DataType="local:MainPageViewModel"
+             x:Class="FlexLayout.MainPage"
+             Style="{StaticResource DefaultPageStyle}">
+
+    <ContentPage.Resources>
+         <DataTemplate x:Key="TagsTemplate" x:DataType="local:Tags">
+            <ContentView>
+                <VerticalStackLayout Margin="24,0">
+                   <Label Text="{x:Binding Header, Mode=OneTime}" TextColor="{StaticResource Primary}"/>
+                    <FlexLayout BindableLayout.ItemsSource="{x:Binding Modes, Mode=OneTime}" Wrap="Wrap" Direction="Row" JustifyContent="Start">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="system:String">
+                                 <Label Text="{x:Binding Mode=OneTime}" Background="{StaticResource Neutral0}" TextType="Html"/>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </ContentView>
+        </DataTemplate>
+
+    </ContentPage.Resources>
+    <Grid RowDefinitions="*, auto">
+
+        <CollectionView
+                ItemsSource="{x:Binding Sections}"
+                ItemTemplate="{StaticResource TagsTemplate}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+            </CollectionView>
+        </Grid>
+</ContentPage>
+

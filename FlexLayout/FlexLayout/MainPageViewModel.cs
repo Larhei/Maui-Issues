@@ -6,12 +6,8 @@ namespace FlexLayout
 {
 	public partial class MainPageViewModel : ObservableObject
     {
-
-        private readonly object _lockObject = new object();
-
         [ObservableProperty]
 		private ObservableCollection<object> _sections = new ObservableCollection<object>();
-		Random r = new Random(Guid.NewGuid().GetHashCode());
 
         public MainPageViewModel()
 		{

@@ -24,5 +24,4 @@ namespace LayoutCycle
             DisplayAlert("Loaded", "Done", "Ok");
         }
     }
-
 }

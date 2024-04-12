@@ -4,13 +4,20 @@ namespace LayoutCycle
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
+        private void OnNavigating(object sender, WebNavigatingEventArgs e)
+        {
+            DisplayAlert("Navigating","GO","Ok");
+        }
+
+        private void OnNavigated(object sender, WebNavigatedEventArgs e)
+        {
+            DisplayAlert("Navigated", "Done", "Ok");
+        }
     }
 
 }

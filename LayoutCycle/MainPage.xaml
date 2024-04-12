@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:LayoutCycle">
     <StackLayout>
         <local:CustomBorder>
-            <WebView Background="Red">
+            <WebView Background="Red" Navigating="OnNavigating" Navigated="OnNavigated">
                 <WebView.Source>
                     <HtmlWebViewSource>
                         <HtmlWebViewSource.Html>

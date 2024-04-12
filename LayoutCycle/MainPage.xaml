@@ -19,20 +19,6 @@
  </BODY>
  </HTML>
  ]]>
-                            <!--
-                            <![CDATA[
-                            <HTML>
-                            <BODY>
-                            <b>Erkenntnisse aus der Stressforschung</b>
-                            Die Weltgesundheitsorganisation hat Stress zu einem der größten Gesundheitsrisiken erklärt. Bisher war auch Mediziner*innen der Grund nicht klar, warum manche Menschen in extremen Lebenssituationen ruhig bleiben, während andere schon bei kleinsten Veränderungen völlig aus 
-                            <input type="text" id="ID_1" name="ID_1"> 
-                            Fassung geraten. Kanadische Wissenschaftler*innen sind der Überzeugung, 
-                            <input type="text" id="ID_2" name="ID_2"> 
-                            Streicheleinheiten, die wir beispielsweise von unseren Eltern während unserer Kindheit erhalten, im späteren Leben das beste Mittel 
-                            </BODY>
-                            </HTML>
-                            ]]>
-                                -->
                         </HtmlWebViewSource.Html>
                     </HtmlWebViewSource>
                 </WebView.Source>

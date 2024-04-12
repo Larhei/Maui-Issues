@@ -18,6 +18,11 @@ namespace LayoutCycle
         {
             DisplayAlert("Navigated", "Done", "Ok");
         }
+
+        private void OnLoaded(object sender, EventArgs e)
+        {
+            DisplayAlert("Loaded", "Done", "Ok");
+        }
     }
 
 }

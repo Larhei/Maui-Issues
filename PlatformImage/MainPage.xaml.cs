@@ -18,6 +18,16 @@ namespace PlatformImage
                var res = image.Resize(10, 10, ResizeMode.Fit,true);
                var x = res.Width;
                await DisplayAlert("Success", "Resize returned IIImage", "Yes");
+                try
+                {
+                     x = image.Width;
+                    await DisplayAlert("Error", "Resize did not dispose Original", "Ups again");
+                }
+                catch (ObjectDisposedException)
+                {
+
+                }
+
             }
             catch (ObjectDisposedException)
             {
@@ -59,13 +69,21 @@ namespace PlatformImage
 
             }
             var max = Math.Max(w, h);
-            var factor = (10 / max);
+            var factor = (10F / max);
 
             var scaledx = w * factor;
             var scaledy = h * factor;
             if(res.Width != scaledx || res.Height != scaledy)
             {
-                await DisplayAlert("Error?", "Downsize did not scale to Aspect.Fit. Why is it maxWidth and maxHeight if it is just resizing to what ever given value?", "Ups?");
+                if (Math.Abs(res.Width - scaledx) < 1 && Math.Abs(res.Height - scaledy) < 1)
+                {
+                    await DisplayAlert("Error?", "Downsize did not return expected Aspect. Do we have a rounding issue?", "Ups?");
+                }
+                else
+                {
+                    await DisplayAlert("Error?", "Downsize did not scale to Aspect.Fit. Why is it maxWidth and maxHeight if it is just resizing to what ever given value?", "Ups?");
+                }
+                
             }
         }
     }

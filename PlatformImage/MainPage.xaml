@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlatformImage.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button
+                Text="Resize" 
+                Clicked="OnResize"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="DownSize" 
+                Clicked="OnDownSize"
+                HorizontalOptions="Fill" /> 
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

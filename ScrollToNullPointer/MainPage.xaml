@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrollToNullPointer.MainPage"
+             xmlns:local="clr-namespace:ScrollToNullPointer"
+             x:DataType="local:MyViewModel">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+        <ListView x:Name="PART_Scroll" ItemsSource="{Binding Items}" HeightRequest="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+
+</ContentPage>

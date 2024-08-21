@@ -8,11 +8,14 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-        <ListView ItemsSource="{x:Binding Items}" HeightRequest="500" BackgroundColor="Red" Scrolled="ListView_Scrolled">
+
+        <ListView ItemsSource="{x:Binding Items}" CachingStrategy="RecycleElementAndDataTemplate" HeightRequest="500" BackgroundColor="Red" Scrolled="ListView_Scrolled">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <local:MyView HeightRequest="400" />
+                        <Border>
+                            <local:MyView HeightRequest="400" />
+                        </Border>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -21,7 +24,9 @@
         <CollectionView ItemsSource="{x:Binding Items}" HeightRequest="500" BackgroundColor="Red" Scrolled="CollectionView_Scrolled">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    <Border>
                         <local:MyView HeightRequest="400" />
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

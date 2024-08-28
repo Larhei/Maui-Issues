@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListVirtualisation.MainPage"
+             xmlns:local="clr-namespace:ListVirtualisation"
+             x:DataType="local:MyViewModel" >
+
+        <Grid RowDefinitions="*,*">
+        <ListView Grid.Row="0"  ItemsSource="{x:Binding Items}" CachingStrategy="RecycleElementAndDataTemplate" BackgroundColor="Red" Scrolled="ListView_Scrolled">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Border>
+                            <local:MyView HeightRequest="400" />
+                        </Border>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <CollectionView ItemsSource="{x:Binding Items}" Grid.Row="1"  BackgroundColor="Red" Scrolled="CollectionView_Scrolled">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <local:MyView HeightRequest="400" />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>

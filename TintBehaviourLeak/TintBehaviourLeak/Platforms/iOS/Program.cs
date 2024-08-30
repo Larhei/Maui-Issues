@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace CommunityToolkitCrash;
+namespace TintBehaviourLeak;
 
 public class Program
 {
@@ -13,3 +13,4 @@ public class Program
 		UIApplication.Main(args, null, typeof(AppDelegate));
 	}
 }
+

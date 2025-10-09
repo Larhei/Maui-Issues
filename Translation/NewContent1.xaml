@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp2.NewContent1"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <VerticalStackLayout>
+        <Grid
+            BackgroundColor="Green"
+            ColumnDefinitions="10,*,10"
+            RowDefinitions="25,25, auto"
+            ZIndex="1">
+            <Border
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                TranslationY="50"
+                VerticalOptions="Start">
+                <Button
+                    Background="Red"
+                    Clicked="Button_Clicked"
+                    Text="Does not work on Android" />
+            </Border>
+        </Grid>
+        <VerticalStackLayout TranslationY="50">
+            <Button
+                Background="Purple"
+                Clicked="Button_Clicked"
+                Text="Works on Android but not on Windows" />
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Border TranslationY="50">
+                <Button Clicked="Button_Clicked" Text="Does not work on Android" />
+            </Border>
+        </VerticalStackLayout>
+        <Button
+            Clicked="Button_Clicked"
+            Text="Works"
+            TranslationY="50" />
+    </VerticalStackLayout>
+</ContentPage>
